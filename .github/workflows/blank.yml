@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For Nailea 💌</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      color: #3a1c1c;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #yes:hover {
+      transform: scale(1.1);
+    }
+
+    #no {
+      background: #ddd;
+      color: #555;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Nailea 💗</h1>
+    <p>
+      I don’t know how God is moving behind the scenes,
+      but I know my heart keeps choosing you.
+      <br><br>
+      Will you be my Valentine?
+    </p>
+
+    <div class="buttons">
+      <button id="yes" onclick="yesClicked()">Yes 💘</button>
+      <button id="no" onmouseover="moveNo()">No 🙃</button>
+    </div>
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="
+          height:100vh;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          background:linear-gradient(135deg, #ff758c, #ff7eb3);
+          color:white;
+          font-family:Arial;
+          text-align:center;
+        ">
+          <h1>
+            You just made my heart smile 🤍<br><br>
+            I release this to God.<br>
+            I trust You with her, and with me.<br>
+            This is offered, not held.
+          </h1>
+        </div>
+      `;
+    }
+
+    function moveNo() {
+      const noBtn = document.getElementById("no");
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  </script>
+
+</body>
+</html>
